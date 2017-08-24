@@ -5,7 +5,7 @@ RUN pip install --upgrade pip
 RUN pip install browsepy	
 RUN mkdir /downloads
 
+EXPOSE 8080
 
-
-# Define default command.
-CMD ["/bin/bash"]
+# Default command
+CMD ["browsepy", "0.0.0.0", "8080", "--directory", "/downloads"]
